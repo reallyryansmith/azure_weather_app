@@ -16,7 +16,7 @@
             <p class="error">{{ weather.error }}</p>
         {% else %}
             <h2>Weather in {{ city.title() }}</h2>
-            <p>Temperature: {{ weather.main.temp }} °C</p>
+            <p>Temperature: {{ weather.main.temp }} °F</p>
             <p>Condition: {{ weather.weather[0].description.title() }}</p>
             <p>Wind: {{ weather.wind.speed }} m/s</p>
         {% endif %}
