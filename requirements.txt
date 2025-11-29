@@ -3,5 +3,5 @@ pytest
 ruff
 pip-audit
 Flask>=2.3.0,<3.0.0
-Werkzeug<3.0.0
+Werkzeug
 
