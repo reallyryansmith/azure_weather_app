@@ -40,7 +40,7 @@ jobs:
       - name: Security scan dependencies with pip-audit
         run: |
           pip install pip-audit
-          pip-audit
+          pip-audit -r requirements.txt
 
 
       - name: Zip artifact for deployment
