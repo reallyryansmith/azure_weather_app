@@ -10,7 +10,7 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 # Telling ruff lint to ignore that this import isn't at the top, it can't be!
-import app as weather_app  # ruff: noqa: E402
+import app as weather_app  # # noqa: E402
 
 @pytest.fixture
 def client(monkeypatch):
