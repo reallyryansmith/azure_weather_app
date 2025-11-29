@@ -1,9 +1,15 @@
+import os
+import sys
 from unittest.mock import patch, MagicMock
 
 import pytest
 
-import app as weather_app  # this matches your app.py file name
+# --- Make sure the project root (where app.py lives) is on sys.path ---
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
+import app as weather_app  # now this should work in CI
 
 @pytest.fixture
 def client(monkeypatch):
